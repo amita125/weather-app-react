@@ -18,17 +18,16 @@ class Weather extends React.Component {
     }, 60000);
   }
 
-  getTime() {
+  async getTime() {
     const timeApiKey = process.env.REACT_APP_TIME_API_KEY;
     const cityTime = `http://api.timezonedb.com/v2.1/get-time-zone?key=${timeApiKey}&format=json&by=position&lat=${this.props.lat}&lng=${this.props.lon}`;
     
-    fetch(cityTime)
+    await fetch(cityTime)
       .then((response) => response.json())
       .then((data) => {
         this.setState({
           time: data.formatted,
         });
-        console.log(data.formatted);
       })
       .catch((error) => {
         console.log(error);
