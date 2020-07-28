@@ -15,7 +15,7 @@ class Weather extends React.Component {
     this.getTime();
     this.interval = setInterval(() => {
       this.getTime();
-    }, 5000);
+    }, 60000);
   }
 
   getTime() {

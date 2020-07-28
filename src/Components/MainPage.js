@@ -35,7 +35,8 @@ class MainPage extends Component {
   getWeather = async (e) => {
     const name = e.target.elements.city.value;
     const weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY;
-    const weather = `http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${weatherApiKey}&units=metric`;
+    console.log(weatherApiKey);
+    const weather = `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${weatherApiKey}&units=metric`;
     const forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${name}&appid=${weatherApiKey}&units=metric`;
     
     e.preventDefault();
