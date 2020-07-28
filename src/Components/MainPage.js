@@ -84,7 +84,6 @@ class MainPage extends Component {
         });
       });
   };
-
   render() {
     return (
       <Container fluid>
@@ -92,11 +91,12 @@ class MainPage extends Component {
           <Col>
             <div className={`mainPage bg-img ${this.state.main}`} >
               <Navigation />
+              <div className="weather">
               <WeatherForm loadWeather={this.getWeather} />
               {this.state.load ? (
                 this.state.error ? (
                   <div className="errorDisplay">
-                    <h3> No matching cities found. Try searching with a valid city
+                    <h3 className="errorMsg"> No matching cities found. Try searching with a valid city
                     name!</h3>
                   </div>
                 ) : (
@@ -121,12 +121,12 @@ class MainPage extends Component {
                       />
                       <Forecast forecastData={this.state.forecastData} theme={this.state.main}/>
                     </div>
-                 
                 )
               ) : (
                   
                 this.state.error
               )}
+              </div>
             </div>
           </Col>
         </Row>
@@ -137,4 +137,3 @@ class MainPage extends Component {
 
 export default MainPage;
 
-// Icons made by <a href="https://www.flaticon.com/authors/linector" title="Linector">Linector</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>

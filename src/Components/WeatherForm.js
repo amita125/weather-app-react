@@ -10,7 +10,6 @@ class WeatherForm extends Component {
             alt="search icon"
           /></span>
           <Form.Control type="text" name="city" placeholder="Enter City" />
-          
         </Form>
       </div>
     );
