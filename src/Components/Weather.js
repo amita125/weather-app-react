@@ -47,7 +47,7 @@ class Weather extends React.Component {
                   {this.props.city}, {this.props.country}
                 </h2>
                 <h4 className="subtext">
-                  <Moment format="dddd-D-MMMM">{this.state.time}</Moment>
+                  <Moment format="dddd D MMMM">{this.state.time}</Moment>
                   <span> | </span>
                   <Moment format="h:mm A">{this.state.time}</Moment>
                 </h4>
