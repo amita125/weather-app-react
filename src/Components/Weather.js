@@ -22,7 +22,7 @@ class Weather extends React.Component {
     const timeApiKey = process.env.REACT_APP_TIME_API_KEY;
     const cityTime = `http://api.timezonedb.com/v2.1/get-time-zone?key=${timeApiKey}&format=json&by=position&lat=${this.props.lat}&lng=${this.props.lon}`;
     
-    await fetch(cityTime)
+     fetch(cityTime)
       .then((response) => response.json())
       .then((data) => {
         this.setState({
