@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+*{
+    font-family: 'Noticia Text', serif;
+    text-transform: capitalize;
+}
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+   margin: 0px;
+    padding: 0px;
+    overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-img{
+  background-size: cover;  
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
+.mainPage {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  margin: 0;
+}
+.weather-data {
+    position: relative;
+    justify-content: center;
+}
+span.navbar-brand.mb-0.h1 {
+        color: #f7fcfc;
+    font-size: 30px;
+}
+.errorDisplay {
+    margin: 50px;
+    /* padding: 50px 80px 50px; */
+    text-align: center;
+    color: #f7fcfc;
 }
 
-.App-link {
-  color: #61dafb;
+
+form {
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input.form-control {
+    padding: 10px 60px 10px;
+    border-radius: 40px;
+    height: 50px;
+}
+
+
+.weather-view {
+    margin-top: 30px;
+}
+
+.locationName {
+    padding: 5px 35px 2px;
+    margin: 5px 10px 30px;
+    border-radius: 10px;
+}
+span.searchImg {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 15px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+}
+
+img#weather-icon {
+    width: 250px;
+    height: 180px;
+}
+img#search {
+    height: 25px;
+    width: 40px;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 16px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.weather-info {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    margin-right: 10px;  
+    border-radius: 10px;
+
+}
+.weather-info > div {
+    text-align: center;
+    padding: 10px;
+}
+
+.temp-info {
+    text-align: center;
+    padding-top: 50px;
+    
+}
+.forecastData {
+  overflow: auto;
+  white-space: nowrap;
+  margin: 30px 5px 20px;
+}
+
+.forecastData > div {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    width: 110px;
+    border-radius: 10px;
+}
+
+.Rain, .Drizzle{
+    background-image: url(./Images/Themes/rain.jpg);
+}
+.Clear{
+    background-image: url(./Images/Themes/clear.jpg);
+}
+.Clouds{
+    background-image: url(./Images/Themes/cloudy.jpg);
+}
+.Snow{
+    background-image: url(./Images/Themes/snow.jpg);
+}
+.Storm{
+    background-image: url(./Images/Themes/storm.jpg);
+}
+.Thunderstorm{
+    background-image: url(./Images/Themes/lightning.jpg);
+}
+.Tornado{
+    background-image: url(./Images/Themes/tornado.jpg);
+}
+.Mist, .Smoke, .Haze, .Dust, .Fog, .Sand, .Ash, .Squall{
+    background-image: url(./Images/Themes/mist.jpg);
+}
+
+.Rainbg, .Drizzlebg {
+    background: rgb(0 0 0);
+    background: rgb(48 75 80 / 49%);
+    color: rgb(251 251 255);
+}
+.Clearbg{
+    background: rgb(0 0 0);
+    background: rgb(56 78 83 / 18%);
+    color: rgb(254 254 254);
+}
+.Cloudsbg{
+    background: rgb(0 0 0);
+    background: rgb(50 68 65 / 28%);
+    color: rgb(251 251 255);
+}
+.Snowbg{
+    background: rgb(0 0 0);
+    background: rgb(66 103 109 / 49%);
+    color: rgb(255 255 255);
+}
+.Stormbg{
+    background: rgb(0 0 0);
+    background: rgb(39 67 72 / 47%);
+    color: rgb(251 251 255);
+}
+.Thunderstormbg{
+    background: rgb(0 0 0);
+    background: rgb(83 44 76 / 40%);
+    color: rgb(251 251 255);
+}
+.Tornadobg{
+    background: rgb(0 0 0);
+    background: rgb(41 50 52 / 22%);
+    color: rgb(251 251 255);
+}
+.Mistbg, .Smokebg, .Hazebg, .Dustbg, .Fogbg, .Sandbg, .Ashbg, .Squallbg{
+    background: rgb(0 0 0);
+    background: rgb(32 59 64 / 11%);
+    color: rgb(251 251 255);
+}
+span {
+    font-size: 20px;
+    font-weight: bold;
 }
