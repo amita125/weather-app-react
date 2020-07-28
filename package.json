@@ -1,5 +1,5 @@
 {
-  "homepage": "http://amita125.github.io/weather-app-react",
+  "homepage": "http://amita125.github.io/weather-app-react/",
   "name": "weather-app-react",
   "version": "0.1.0",
   "private": true,
@@ -13,7 +13,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "predeply": "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
